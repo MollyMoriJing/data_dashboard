@@ -1,0 +1,62 @@
+.dog-chart-container {
+    width: 100%;
+    min-height: 400px;
+  }
+  
+  .custom-tooltip {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .tooltip-label {
+    font-weight: 600;
+    color: #333;/* DogChart.css */
+    .dog-chart-container {
+      width: 100%;
+      min-height: 400px;
+    }
+    
+    .custom-tooltip {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(102, 126, 234, 0.2);
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+    
+    .tooltip-label {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+    
+    .tooltip-value {
+      color: #667eea;
+      font-weight: 500;
+      margin: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .dog-chart-container {
+        min-height: 300px;
+      }
+    }
+    margin-bottom: 0.5rem;
+  }
+  
+  .tooltip-value {
+    color: #667eea;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .dog-chart-container {
+      min-height: 300px;
+    }
+  }
