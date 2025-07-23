@@ -1,13 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./PetCard.css";
 
 const PetCard = ({ imageUrl, name, breed, gender, age, city, size, id, url }) => {
-  const handleLearnMore = () => {
-    // Option 1: Open the Petfinder URL in a new tab
+  const handlePetfinderLink = (e) => {
+    e.stopPropagation();
     window.open(url, '_blank');
-    
-    // Option 2: If you want to show more details in a modal or expandable section
-    // You could add a callback prop here like: onLearnMore(id)
   };
 
   return (
@@ -15,14 +13,24 @@ const PetCard = ({ imageUrl, name, breed, gender, age, city, size, id, url }) =>
       <div className="pet-card-image-container">
         <img src={imageUrl} alt={`Picture of ${name}`} className="pet-card-image" />
         <div className="pet-card-overlay">
-          <button className="pet-card-button" onClick={handleLearnMore}>
-            Learn More
+          <Link to={`/dog/${id}`} className="pet-card-link">
+            <button className="pet-card-button primary">
+              View Details
+            </button>
+          </Link>
+          <button 
+            className="pet-card-button secondary" 
+            onClick={handlePetfinderLink}
+          >
+            Adopt on Petfinder
           </button>
         </div>
       </div>
       
       <div className="pet-card-content">
-        <h3 className="pet-card-name">{name}</h3>
+        <Link to={`/dog/${id}`} className="pet-card-name-link">
+          <h3 className="pet-card-name">{name}</h3>
+        </Link>
         
         <div className="pet-card-details">
           <div className="pet-card-detail">

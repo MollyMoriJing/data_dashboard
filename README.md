@@ -1,62 +1,48 @@
-# Web Development Project 5 - _Pawsome Adoption Hub_
+# Web Development Project 6 - _Pawsome Adoption Hub_
 
 Submitted by: **Jing Du**
 
-This web app: **A dog adoption platform that connects users with adoptable dogs through the [Petfinder API](https://www.petfinder.com/developers/)**
+This web app: **A dog adoption platform that connects users with adoptable dogs through the [Petfinder API](https://www.petfinder.com/developers/). The app features interactive data visualizations, detailed dog profiles, advanced filtering capabilities.**
 
-Time spent: **15** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [✅] **The site has a dashboard displaying a list of data fetched using an API call**
-  - The dashboard should display at least 10 unique items, one per row
-  - The dashboard includes at least two features in each row
-- [✅] **`useEffect` React hook and `async`/`await` are used**
-- [✅] **The app dashboard includes at least three summary statistics about the data**
-  - The app dashboard includes at least three summary statistics about the data, such as:
-    - Most Common Age Group: Displays the most frequent age category among displayed dogs
-    - Most Popular Breed: Shows the most common breed in the current dataset
-    - Adoption Ready Dogs: Total count of dogs available for adoption
-- [✅] **A search bar allows the user to search for an item in the fetched data**
-  - The search bar **correctly** filters items in the list, only displaying items matching the search query
-  - The list of results dynamically updates as the user types into the search bar
-- [✅] **An additional filter allows the user to restrict displayed items by specified categories**
-  - The filter restricts items in the list using a **different attribute** than the search bar
-  - The filter **correctly** filters items in the list, only displaying items matching the filter attribute in the dashboard
-  - The dashboard list dynamically updates as the user adjusts the filter
+- [✅] **Clicking on an item in the list view displays more details about it**
+  - Clicking on an item in the dashboard list navigates to a detail view for that item
+  - Detail view includes extra information about the item not included in the dashboard view
+  - The same sidebar is displayed in detail view as in dashboard view
+  - _To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording._
+- [✅] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
+  - _To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording._
+- [✅] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
+  - At least two charts should be incorporated into the dashboard view of the site
+  - Each chart should describe a different aspect of the dataset
 
 The following **optional** features are implemented:
 
-- [✅] Multiple filters can be applied simultaneously
-- [✅] Filters use different input types
-  - e.g., as a text input, a dropdown or radio selection, and/or a slider
-- [✅] The user can enter specific bounds for filter values
+- [✅] The site’s customized dashboard contains more content that explains what is interesting about the data
+  - e.g., an additional description, graph annotation, suggestion for which filters to use, or an additional page that explains more about the data
+- [✅] The site allows users to toggle between different data visualizations
+  - User should be able to use some mechanism to toggle between displaying and hiding visualizations
 
 The following **additional** features are implemented:
 
-- [ ] responsive design, advanced filtering system with specific bounds, visual enhancement features
+- [✅] Button on the detailed page lead to the real adoption site.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='demopart2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with Kap
 
 ## Notes
 
-Real-time Filtering Performance
-
-Challenge: Managing multiple simultaneous filters (search, gender, age, size) while maintaining smooth performance
-Solution: Optimized filtering logic with efficient array methods and implemented debouncing for search input
-
-State Management Coordination
-
-Challenge: Coordinating multiple state variables (filters, search, pagination, loading states) without causing re-render issues
-Solution: Carefully structured React hooks and useEffect dependencies to prevent infinite loops and optimize performance
+Data visualization optimization and annotation using Recharts.
 
 ## License
 

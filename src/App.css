@@ -9,6 +9,13 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #333;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  min-height: 100vh;
 }
 
 .container {
@@ -63,13 +70,96 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+}
+
+/* Data Story Section */
+.data-story-section {
+  margin-bottom: 3rem;
+}
+
+.data-story-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.story-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.story-card {
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border-left: 4px solid #667eea;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-3px);
+}
+
+.story-card h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.story-card p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* Chart Section */
 .chart-section {
   margin-bottom: 3rem;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.chart-toggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.toggle-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.toggle-btn.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #667eea;
+  font-weight: 600;
 }
 
 .chart-container {
@@ -119,6 +209,21 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .chart-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .app-title {
     font-size: 2.5rem;
@@ -144,6 +249,14 @@
   .container {
     padding: 0 15px;
   }
+  
+  .data-story-content {
+    padding: 1.5rem;
+  }
+  
+  .story-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -153,5 +266,10 @@
   
   .dogs-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .toggle-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
